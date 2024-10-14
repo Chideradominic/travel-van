@@ -9,7 +9,7 @@ export default function Home() {
             Add adventure to your life by joining the #vanlife movement. Rent
             the perfect van to make your perfect road trip.
           </p>
-          <Link to="/vans" className="home-content-btn">
+          <Link to="/van" className="home-content-btn">
             <button className="btn">Find your Van</button>
           </Link>
         </div>

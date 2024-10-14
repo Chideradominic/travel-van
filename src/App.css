@@ -69,11 +69,41 @@ footer {
   padding: 2em;
   margin-top: 2em;
 }
-.explore-btn {
-  border: none;
+.explore a {
   background-color: black;
   color: white;
   padding: 1em;
-  margin-top: 1em;
   border-radius: 10px;
+}
+.explore h2 {
+  margin-bottom: 2em;
+}
+.vanLists li {
+  list-style: none;
+  max-width: 200px;
+}
+.vanLists {
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) minmax(200px, 300px);
+  gap: 20px;
+  padding: 3em 0;
+  justify-content: center;
+}
+.van-image {
+  width: 100%;
+  min-width: 300px;
+}
+.van-type {
+  color: #fff;
+  padding: 0.5em;
+  text-align: center;
+}
+.name-price {
+  display: flex;
+  justify-content: space-between;
+}
+.van-name,
+.van-price {
+  font-size: 1.2rem;
+  font-weight: 500;
 }

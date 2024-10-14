@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./assets/Home";
 import About from "./assets/About";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Van from "./assets/Van";
 
 function App() {
   return (
@@ -16,13 +17,14 @@ function App() {
             </div>
             <div className="about-vans">
               <Link to="/about">About</Link>
-              <Link to="/"> Vans</Link>
+              <Link to="/van"> Vans</Link>
             </div>
           </div>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/van" element={<Van />} />
         </Routes>
         <footer>
           <div className="footer">
