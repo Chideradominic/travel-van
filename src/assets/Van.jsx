@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 export default function Van() {
   const [vans, setVans] = useState([]);
   useEffect(() => {
@@ -20,14 +21,18 @@ export default function Van() {
 
   const vanElement = vans.map(({ imageUrl, price, id, name, type }) => (
     <li key={id}>
-      <img className="van-image" src={imageUrl} alt="VanImage" />
-      <div className="name-price">
-        <p className="van-name">{name}</p>
-        <p className="van-price">${price}</p>
-      </div>
-      <p className="van-type" style={{ backgroundColor: gettype(type) }}>
-        {type.split("")[0].toUpperCase() + type.slice(1)}
-      </p>
+      <Link to={`/van/${id}`} className="vans-list">
+        <div className="van-images">
+          <img className="van-image" src={imageUrl} alt="VanImage" />
+        </div>
+        <div className="name-price">
+          <p className="van-name">{name}</p>
+          <p className="van-price">${price}</p>
+        </div>
+        <p className="van-type" style={{ backgroundColor: gettype(type) }}>
+          {type.charAt(0).toUpperCase() + type.slice(1)}
+        </p>
+      </Link>
     </li>
   ));
 

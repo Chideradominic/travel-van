@@ -3,6 +3,7 @@ import Home from "./assets/Home";
 import About from "./assets/About";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Van from "./assets/Van";
+import VanDetails from "./assets/VanDetails";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/van" element={<Van />} />
+          <Route path="/van/:id" element={<VanDetails />} />
         </Routes>
         <footer>
           <div className="footer">

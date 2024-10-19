@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1em 0;
 }
 .container {
   width: 90%;
@@ -16,7 +17,7 @@
 .container a {
   color: black;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 0;
 }
 nav {
   background-color: #fff7ed;
@@ -80,23 +81,28 @@ footer {
 }
 .vanLists li {
   list-style: none;
-  max-width: 200px;
 }
 .vanLists {
   display: grid;
-  grid-template-columns: minmax(200px, 300px) minmax(200px, 300px);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 3em 0;
   justify-content: center;
+  align-items: center;
 }
 .van-image {
   width: 100%;
-  min-width: 300px;
+  border-radius: 10px;
 }
 .van-type {
   color: #fff;
   padding: 0.5em;
+  width: fit-content;
   text-align: center;
+  border-radius: 5px;
+}
+.van-images {
+  border-radius: 5px;
 }
 .name-price {
   display: flex;
@@ -106,4 +112,24 @@ footer {
 .van-price {
   font-size: 1.2rem;
   font-weight: 500;
+}
+.van-component {
+  padding: 3em 0;
+}
+.button-link {
+  width: 100%;
+  background: #ff8c38;
+  color: white;
+  padding: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2em;
+  border: none;
+}
+.van-component img {
+  width: 100%;
+  height: auto;
+}
+.back-to-van {
+  padding: 0;
 }
