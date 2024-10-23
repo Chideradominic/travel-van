@@ -25,7 +25,7 @@ export default function VanDetails() {
   }
 
   return (
-    <div className="van-component">
+    <div className="van-component all-components">
       {van ? (
         <div className="container">
           <Link to="/van" className="back-to-van">

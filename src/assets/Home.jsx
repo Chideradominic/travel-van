@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <>
-      <div className="home-content">
+      <div className="home-content all-components">
         <div className="container">
           <h1>You got the travel plans, we got the travel vans.</h1>
           <p>

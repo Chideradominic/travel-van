@@ -3,7 +3,7 @@ import aboutImg from "./images/about.png";
 export default function AboutUs() {
   return (
     <>
-      <div className="about-main">
+      <div className="about-main all-components">
         <img src={aboutImg} className="about-img" alt="About Image" />
       </div>
       <div className="container about-items">

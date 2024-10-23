@@ -1,38 +1,36 @@
 import "./App.css";
 import Home from "./assets/Home";
 import About from "./assets/About";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Van from "./assets/Van";
 import VanDetails from "./assets/VanDetails";
+import Layout from "./component/Loader";
+import HostLayout from "./host/HostLayout";
+import Income from "./host/Income";
+import Reviews from "./host/Reviews";
+import HostVans from "./host/HostVans";
+import Dashboard from "./host/Dashborad";
+import HostVansDetails from "./host/HostVansDetails";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <nav>
-          <div className="container rows">
-            <div className="Logo">
-              <Link to="/">
-                <h1>VANLIFE</h1>
-              </Link>
-            </div>
-            <div className="about-vans">
-              <Link to="/about">About</Link>
-              <Link to="/van"> Vans</Link>
-            </div>
-          </div>
-        </nav>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/van" element={<Van />} />
-          <Route path="/van/:id" element={<VanDetails />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="van" element={<Van />} />
+            <Route path="van/:id" element={<VanDetails />} />
+            <Route path="/host" element={<HostLayout />}>
+              <Route index element={<Dashboard />} />
+              <Route path="income" element={<Income />} />
+              <Route path="reviews" element={<Reviews />} />
+              <Route path="vans" element={<HostVans />} />
+              <Route path="vans/:id" element={<HostVansDetails />} />
+            </Route>
+          </Route>
         </Routes>
-        <footer>
-          <div className="footer">
-            <p>c 2024 VanLife. All rights reserved.</p>
-          </div>
-        </footer>
       </BrowserRouter>
     </>
   );

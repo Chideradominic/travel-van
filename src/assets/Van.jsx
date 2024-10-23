@@ -38,7 +38,7 @@ export default function Van() {
 
   return (
     <>
-      <div className="container">
+      <div className="container all-components">
         <h1>Explore our van options</h1>
         <ul className="vanLists">{vanElement}</ul>
       </div>
