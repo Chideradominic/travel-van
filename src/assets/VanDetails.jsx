@@ -1,10 +1,17 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useLoaderData } from "react-router-dom";
+import apiCall from "./api";
+export function loader({ params }) {
+  return apiCall(params.id);
+}
 export default function VanDetails() {
   const [van, setVan] = useState(null);
   const params = useParams();
-  console.log(params.id);
+  const locations = useLocation();
+  const data = useLoaderData();
+  console.log(data);
+
   // fetch data from API based on vanId
   useEffect(() => {
     fetch(`/api/vans/${String(params.id)}`)
@@ -12,7 +19,10 @@ export default function VanDetails() {
       .then((data) => setVan(data.van))
       .catch((err) => console.error(err));
   }, [params.id]);
-  console.log(van);
+  console.log(locations.state?.type);
+
+  const displayLocation = locations.state ? locations.state.search : "";
+  const displayType = locations.state?.type || "all";
 
   function gettypeColor(van) {
     if (van.type === "simple") {
@@ -26,10 +36,17 @@ export default function VanDetails() {
 
   return (
     <div className="van-component all-components">
-      {van ? (
+      {van && (
         <div className="container">
-          <Link to="/van" className="back-to-van">
-            Back to all Vans
+          <Link
+            to={`..${displayLocation}`}
+            relative="path"
+            className="back-to-van"
+          >
+            &larr;{" "}
+            {displayLocation === "?type="
+              ? "Back to all Vans"
+              : `Back to ${displayType} vans`}
           </Link>
           <div>
             <img src={van.imageUrl} alt={`image of ${van.name} van`} />
@@ -49,8 +66,6 @@ export default function VanDetails() {
           <p className="van-description">{van.description}</p>
           <button className="button-link">Rent this van</button>
         </div>
-      ) : (
-        <h2>Loading......</h2>
       )}
     </div>
   );

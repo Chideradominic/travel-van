@@ -7,7 +7,7 @@ export default function Dashboard() {
         <div className="container">
           <div className="host-nav-bar">
             <NavLink
-              to="/host"
+              to="."
               end
               className={({ isActive }) =>
                 isActive ? "link-active-host" : null
@@ -19,7 +19,7 @@ export default function Dashboard() {
               className={({ isActive }) =>
                 isActive ? "link-active-host" : null
               }
-              to="/host/income"
+              to="income"
             >
               Income
             </NavLink>
@@ -27,7 +27,7 @@ export default function Dashboard() {
               className={({ isActive }) =>
                 isActive ? "link-active-host" : null
               }
-              to="/host/vans"
+              to="vans"
             >
               Vans
             </NavLink>
@@ -35,7 +35,7 @@ export default function Dashboard() {
               className={({ isActive }) =>
                 isActive ? "link-active-host" : null
               }
-              to="/host/reviews"
+              to="reviews"
             >
               Reviews
             </NavLink>

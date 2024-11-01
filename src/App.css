@@ -3,6 +3,39 @@
   padding: 0;
   box-sizing: border-box;
 }
+.header-vanlife {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.about-main {
+  margin-top: 4em;
+}
+.body-items {
+  margin-top: 4em;
+}
+.selected-simple,
+.selected-luxury {
+  background-color: #ff8c38;
+  border: none;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.selected-rugged {
+  background-color: #115e59;
+  border: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  color: #fff;
+}
+.selected-luxury {
+  background-color: #252525;
+  border: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  color: #fff;
+}
 .rows {
   display: flex;
   justify-content: space-between;
@@ -14,15 +47,15 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .container a {
   text-decoration: none;
   color: #252525;
 }
-/* nav a:hover {
-  text-decoration: underline;
+a:hover {
   color: #252525;
   font-weight: bolder;
-}*/
+}
 a.link-active {
   text-decoration: underline;
   color: #252525;
@@ -144,20 +177,36 @@ footer {
 .back-to-van {
   padding: 0;
 }
+.host {
+  margin-top: 4em;
+}
 a.link-active-host {
   text-decoration: underline;
   color: #252525;
   font-weight: bolder;
 }
+
 .dashboard-link:focus {
   color: #252525;
   font-weight: bolder;
   text-decoration: underline;
 }
+
 .host-nav-bar a + a {
   margin-left: 1em;
 }
+.about-vans {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login-icon img {
+  width: 100%;
+}
 .about-vans a + a {
+  margin-left: 1em;
+}
+.host-detail-links a + a {
   margin-left: 1em;
 }
 .van-list {
@@ -183,6 +232,53 @@ a.link-active-host {
   background-color: #fff;
   border-radius: 5px;
 }
-.host-van-container {
-  height: 100vh;
+.home-content {
+  margin-top: 4em;
+}
+.van-ul:nth-last-child(1) {
+  margin-bottom: 2em;
+}
+.van-components {
+  margin-top: 5em;
+}
+.host-van-item {
+  padding: 3em;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 2em;
+}
+.host-detail-links {
+  padding: 2em 0;
+}
+.van-details-inside-items p {
+  padding: 1em 0;
+}
+.host-van-item {
+  margin-bottom: 3em;
+}
+.host-van-pricing h2 {
+  display: inline-block;
+}
+.host-van-image-details {
+  width: 40%;
+}
+.host-van-image-details img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.van-components button + button {
+  margin-left: 1em;
+}
+.simple,
+.rugged,
+.luxury {
+  background-color: #ffead0;
+  border: none;
+  color: #000;
+}
+.clear-filter {
+  border: none;
+  text-decoration: underline;
+  background-color: #fff7ed;
 }

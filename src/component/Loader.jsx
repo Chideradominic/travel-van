@@ -4,9 +4,17 @@ import Footer from "./Footer";
 export default function Loader() {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <div className="allbody">
+        <div className="header-allbody">
+          <Header />
+        </div>
+        <div className="body-items">
+          <Outlet />
+        </div>
+        <div className="footer-items">
+          <Footer />
+        </div>
+      </div>
     </>
   );
 }
